@@ -2,147 +2,162 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <style>
-
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
     /*additional buttons need to appear*/
-        .big_box {
-            margin: 70px auto;
-            width: 500px;
-            height: 900px;
-            background-color: #fdffdd;border: 1px solid #000;
-        }
 
-        .box {
-            width: 100px;
-            height: 100px;
-            background-color: #00ffff;
-            position: relative;
-            animation: explode1 1s;
-            animation-fill-mode: forwards;
-            animation-play-state: paused;
-/*         animation-play-state: paused;*/
-            margin: 20px auto;float:left;left:300px;
-        }
+    .big_box {
+      margin: 70px auto;
+      width: 500px;
+      height: 900px;
+      background-color: #fdffdd;
+      border: 1px solid #000;
+    }
 
-         .anim_play {
-            width: 100px;
-            height: 100px;
-            background-color: #ff009d;
-            position: relative;
-            animation: explode2 1s;
-             animation-fill-mode: forwards;
-           animation-play-state: running;
-            margin: 20px auto;
-        }
-        @keyframes explode1 {
-            10% {
-                left: 300px;
-            }
-            100% {
-                left: 500px;
-            }
-        }
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: #00ffff;
+      position: relative;
+      animation: explode1 1s;
+      animation-fill-mode: forwards;
+      animation-play-state: paused;
+      /*         animation-play-state: paused;*/
+      margin: 20px auto;
+      float: left;
+      left: 300px;
+    }
 
-         @keyframes explode2 {
-            from {
-                left: 300px;
-            }
-            to {
-                left: 500px;
-            }
-        }
+    .anim_play {
+      width: 100px;
+      height: 100px;
+      background-color: #ff009d;
+      position: relative;
+      animation: explode2 1s;
+      animation-fill-mode: forwards;
+      animation-play-state: running;
+      margin: 20px auto;
+    }
 
+    @keyframes explode1 {
+      10% {
+        left: 300px;
+      }
+      100% {
+        left: 500px;
+      }
+    }
 
-         .box2 {
-            width: 100px;
-            height: 100px;
-            background-color: #00ffff;
-            position: relative;
-            animation: explode1a 1s;
-            animation-fill-mode: forwards;
-            animation-play-state: paused;
-/*         animation-play-state: paused;*/
-            margin: 20px auto;left:0px;
-        }
+    @keyframes explode2 {
+      from {
+        left: 300px;
+      }
+      to {
+        left: 500px;
+      }
+    }
 
 
-            .anim_play2 {
-            width: 100px;
-            height: 100px;
-            background-color: #52f866;
-            position: relative;
-            animation: explode2a 1s;
-             animation-fill-mode: forwards;
-           animation-play-state: running;
-            margin: 20px auto;
-        }
-        @keyframes explode1a {
-            10% {
-                left: 0px;
-            }
-            100% {
-                left: -300px;
-            }
-        }
-
-         @keyframes explode2a {
-            from {
-                left: 0px;
-            }
-            to {
-                left: -300px;
-            }
-        }
-
-        .button {
-            width: 50px;
-            height: 20px;
-            background-color: #f00;
-            margin: 50px auto;
-        }
-
-                        /*html button causes two boxes to move in opposite direction using the jquery*/
-        .go {
-            display: block;
-            margin: auto;
-            text-align: center;
-        }
-    </style>
-
-    <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $(".go").on("click", move)
-//                        $(".go").on("click", {
-//                    $(".box").css("animation-play-state", "paused");
-//                }
-            });
+    .box2 {
+      width: 100px;
+      height: 100px;
+      background-color: #00ffff;
+      position: relative;
+      animation: explode1a 1s;
+      animation-fill-mode: forwards;
+      animation-play-state: paused;
+      /*         animation-play-state: paused;*/
+      margin: 20px auto;
+      left: 0px;
+    }
 
 
-//        function move () {
-//                    $(".box").css("animation-play-state", "paused");
-//                }
+    .anim_play2 {
+      width: 100px;
+      height: 100px;
+      background-color: #52f866;
+      position: relative;
+      animation: explode2a 1s;
+      animation-fill-mode: forwards;
+      animation-play-state: running;
+      margin: 20px auto;
+    }
 
-        function move () {
-                    $(".box").toggleClass("anim_play");
-             $(".box2").toggleClass("anim_play2");
-                }
+    @keyframes explode1a {
+      10% {
+        left: 0px;
+      }
+      100% {
+        left: -300px;
+      }
+    }
 
-    </script>
+    @keyframes explode2a {
+      from {
+        left: 0px;
+      }
+      to {
+        left: -300px;
+      }
+    }
+    /*this button is not being used*/
+
+    .button {
+      width: 50px;
+      height: 20px;
+      background-color: #f00;
+      margin: 50px auto;
+    }
+    /*html button causes two boxes to move in opposite direction using the jquery*/
+
+    .go {
+      display: block;
+      margin: auto;
+      text-align: center;
+    }
+    /*adding a button to test pop up labels for components*/
+
+    .component_button {
+      height: 100px;
+      width: 300px;
+      background-color: #4d9;
+      margin: auto;
+      text-align: center;
+    }
+  </style>
+
+  <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(".go").on("click", move)
+      //                        $(".go").on("click", {
+      //                    $(".box").css("animation-play-state", "paused");
+      //                }
+    });
+
+
+    //        function move () {
+    //                    $(".box").css("animation-play-state", "paused");
+    //                }
+
+    function move() {
+      $(".box").toggleClass("anim_play");
+      $(".box2").toggleClass("anim_play2");
+    }
+  </script>
 </head>
 
 <body>
-    <div class="big_box">
-        <div class="button"></div>
-        <button type="button" class="go">start animation button</button>
-        <div class="box"></div>
-        <div class="box2"></div>
+  <div class="big_box">
+    <div class="button"></div>
+    <button type="button" class="go">start animation button</button>
+    <div class="box"></div>
+    <div class="box2"></div>
 
-
-    </div>
+    <div class="component_button"> test </div>
+  </div>
 
 </body>
 
